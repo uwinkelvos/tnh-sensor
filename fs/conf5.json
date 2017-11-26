@@ -1,0 +1,5 @@
+{
+	"mqtt": {
+		"server": "broker.hivemq.com:1883"
+	}
+}

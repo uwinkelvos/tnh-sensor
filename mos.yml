@@ -47,14 +47,21 @@ filesystem:
 #  - ["debug.level", 3]
 
 config_schema:
- - ["app", "o", {title: "My app custom settings"}]
+ - ["app", "o", {title: "TnH custom settings"}]
  - ["app.pin", "i", 14, {title: "GPIO pin a sensor is attached to"}]
  - ["app.sampleCount", "i", 3, {title: "how many samples to take per cycle"}]
  - ["app.sampleInterval", "i", 5000, {title: "sample interval (ms) in sleep cycle"}]
  - ["app.sleepInterval", "i", 900000000, {title: "sleep interval (µs) / cycle length"}]
+ - ["app.output", "o", {title: "TnH output settings"}]
+ - ["app.output.file", "o", {title: "TnH output file settings"}]
+ - ["app.output.file.enable", "b", false, {title: "output to file"}]
+ - ["app.output.file.name", "s", "data.csv", {title: "output filename"}]
+ - ["app.output.mqtt", "o", {title: "TnH output mqtt settings"}]
+ - ["app.output.mqtt.enable", "b", true, {title: "output to mqtt broker"}]
+ - ["app.output.mqtt.topic", "s", "tnh/apartment/room", {title: "mqtt topic"}]
  - ["wifi.sta.enable", true]
  - ["wifi.ap.enable", false]
-
+ - ["mqtt.enable", true]
 
 # List of libraries used by this app, in order of initialisation
 libs:
@@ -64,6 +71,7 @@ libs:
   - origin: https://github.com/mongoose-os-libs/rpc-uart
   - origin: https://github.com/mongoose-os-libs/wifi
   - origin: https://github.com/mongoose-os-libs/dht
+  - origin: https://github.com/mongoose-os-libs/mqtt
   - origin: https://github.com/mongoose-os-libs/mjs
 
 # Used by the mos tool to catch mos binaries incompatible with this file format
