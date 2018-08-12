@@ -1,8 +1,8 @@
 load("api_config.js");
-load("api_rpc.js");
 load("api_dht.js");
 load("api_timer.js");
 load("api_sys.js");
+load("api_events.js");
 load("api_net.js");
 load("api_esp8266.js");
 load("api_mqtt.js");
@@ -14,7 +14,7 @@ let ev = null;
 let sampleCounter = 0;
 let timer = null;
 
-Net.setStatusEventHandler(function (ev, arg) {
+Event.addGroupHandler(Net.EVENT_GRP, function (ev, evdata, arg) {
 	if (ev === Net.STATUS_GOT_IP) {
 		print("####### connected!");
 		timer = Timer.set(Cfg.get("app.sampleInterval"), true, function () {
