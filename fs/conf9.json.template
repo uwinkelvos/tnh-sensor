@@ -1,0 +1,15 @@
+{
+	"device": {
+		"id": "uw-DEADBEEF"
+	},
+	"wifi": {
+		"sta": {
+			"ssid": "SSID",
+			"pass": "PASSWORD"
+		}
+	},
+	"app": {
+		"sleepInterval": 5000000,
+		"sampleCount": 100
+	}
+}
