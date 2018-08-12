@@ -48,7 +48,7 @@ filesystem:
 
 config_schema:
  - ["app", "o", {title: "TnH custom settings"}]
- - ["app.pin", "i", 14, {title: "GPIO pin a sensor is attached to"}]
+ - ["app.pin", "i", 4, {title: "GPIO pin a sensor is attached to"}]
  - ["app.sampleCount", "i", 3, {title: "how many samples to take per cycle"}]
  - ["app.sampleInterval", "i", 5000, {title: "sample interval (ms) in sleep cycle"}]
  - ["app.sleepInterval", "i", 900000000, {title: "sleep interval (µs) / cycle length"}]

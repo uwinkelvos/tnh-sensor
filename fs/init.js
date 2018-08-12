@@ -8,7 +8,7 @@ load("api_esp8266.js");
 load("api_mqtt.js");
 load("api_file.js");
 
-let dht = DHT.create(Cfg.get("app.pin"), DHT.DHT11);
+let dht = DHT.create(Cfg.get("app.pin"), DHT.DHT22);
 
 let ev = null;
 let sampleCounter = 0;
