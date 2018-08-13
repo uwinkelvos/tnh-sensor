@@ -27,7 +27,7 @@ Event.addGroupHandler(Net.EVENT_GRP, function (ev, evdata, arg) {
 			print("##### data: " + JSON.stringify(data));
 			outputData(data);
 
-			if (sampleCounter >= Cfg.get("app.sampleCount")) {
+			if (sampleCounter > Cfg.get("app.sampleCount")) {
 				Timer.del(timer);
 				ESP8266.deepSleep(Cfg.get("app.sleepInterval"));
 			}
